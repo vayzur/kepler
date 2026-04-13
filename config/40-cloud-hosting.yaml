@@ -36,6 +36,14 @@ endpoints:
     <<: *cloud_defaults
     url: https://workers.cloudflare.com/
 
+  - name: cloudflare-insights
+    <<: *cloud_defaults
+    url: https://static.cloudflareinsights.com/
+
+  - name: cloudflare-cdnjs
+    <<: *cloud_defaults
+    url: https://cdnjs.cloudflare.com/
+
   - name: fastly
     <<: *cloud_defaults
     url: https://www.fastly.com/
