@@ -1,0 +1,49 @@
+# Certificate, identity, and security platforms.
+security-defaults: &security_defaults
+  group: Security
+  interval: 60s
+  client:
+    timeout: 10s
+  headers:
+    User-Agent: "tech-connectivity-monitor/1.0"
+    Accept: "*/*"
+  conditions:
+    - "[STATUS] >= 200"
+    - "[STATUS] < 400"
+
+endpoints:
+  - name: letsencrypt
+    <<: *security_defaults
+    url: https://letsencrypt.org/
+
+  - name: zerossl
+    <<: *security_defaults
+    url: https://zerossl.com/
+
+  - name: crtsh
+    <<: *security_defaults
+    url: https://crt.sh/
+
+  - name: ssllabs
+    <<: *security_defaults
+    url: https://www.ssllabs.com/
+
+  - name: auth0
+    <<: *security_defaults
+    url: https://auth0.com/
+
+  - name: okta
+    <<: *security_defaults
+    url: https://www.okta.com/
+
+  - name: onepassword
+    <<: *security_defaults
+    url: https://1password.com/
+
+  - name: tailscale
+    <<: *security_defaults
+    url: https://tailscale.com/
+
+  - name: virustotal
+    <<: *security_defaults
+    url: https://www.virustotal.com/

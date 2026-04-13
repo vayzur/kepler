@@ -1,0 +1,53 @@
+# Databases, caches, search, and storage platforms.
+data-platform-defaults: &data_platform_defaults
+  group: Data Platforms
+  interval: 60s
+  client:
+    timeout: 10s
+  headers:
+    User-Agent: "tech-connectivity-monitor/1.0"
+    Accept: "*/*"
+  conditions:
+    - "[STATUS] >= 200"
+    - "[STATUS] < 400"
+
+endpoints:
+  - name: mongodb
+    <<: *data_platform_defaults
+    url: https://www.mongodb.com/
+
+  - name: redis
+    <<: *data_platform_defaults
+    url: https://redis.io/
+
+  - name: sqlite
+    <<: *data_platform_defaults
+    url: https://www.sqlite.org/
+
+  - name: postgresql
+    <<: *data_platform_defaults
+    url: https://www.postgresql.org/
+
+  - name: mysql
+    <<: *data_platform_defaults
+    url: https://www.mysql.com/
+
+  - name: mariadb
+    <<: *data_platform_defaults
+    url: https://mariadb.org/
+
+  - name: elastic
+    <<: *data_platform_defaults
+    url: https://www.elastic.co/
+
+  - name: opensearch
+    <<: *data_platform_defaults
+    url: https://opensearch.org/
+
+  - name: minio
+    <<: *data_platform_defaults
+    url: https://min.io/
+
+  - name: clickhouse
+    <<: *data_platform_defaults
+    url: https://clickhouse.com/

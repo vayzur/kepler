@@ -1,0 +1,81 @@
+# Widely used frontend and backend frameworks.
+framework-defaults: &framework_defaults
+  group: Frameworks
+  interval: 60s
+  client:
+    timeout: 10s
+  headers:
+    User-Agent: "connectivity-monitor/1.0"
+    Accept: "*/*"
+  conditions:
+    - "[STATUS] >= 200"
+    - "[STATUS] < 400"
+
+endpoints:
+  - name: react
+    <<: *framework_defaults
+    url: https://react.dev/
+
+  - name: nextjs
+    <<: *framework_defaults
+    url: https://nextjs.org/
+
+  - name: vue
+    <<: *framework_defaults
+    url: https://vuejs.org/
+
+  - name: angular
+    <<: *framework_defaults
+    url: https://angular.dev/
+
+  - name: svelte
+    <<: *framework_defaults
+    url: https://svelte.dev/
+
+  - name: vite
+    <<: *framework_defaults
+    url: https://vite.dev/
+
+  - name: astro
+    <<: *framework_defaults
+    url: https://astro.build/
+
+  - name: nuxt
+    <<: *framework_defaults
+    url: https://nuxt.com/
+
+  - name: express
+    <<: *framework_defaults
+    url: https://expressjs.com/
+
+  - name: nestjs
+    <<: *framework_defaults
+    url: https://nestjs.com/
+
+  - name: django
+    <<: *framework_defaults
+    url: https://www.djangoproject.com/
+
+  - name: flask
+    <<: *framework_defaults
+    url: https://flask.palletsprojects.com/
+
+  - name: fastapi
+    <<: *framework_defaults
+    url: https://fastapi.tiangolo.com/
+
+  - name: laravel
+    <<: *framework_defaults
+    url: https://laravel.com/
+
+  - name: rails
+    <<: *framework_defaults
+    url: https://rubyonrails.org/
+
+  - name: spring
+    <<: *framework_defaults
+    url: https://spring.io/
+
+  - name: tailwindcss
+    <<: *framework_defaults
+    url: https://tailwindcss.com/

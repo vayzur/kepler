@@ -1,0 +1,24 @@
+# Global configuration.
+metrics: false
+skip-invalid-config-update: false
+concurrency: 25
+
+storage:
+  type: sqlite
+  path: /data/gatus.db
+  caching: true
+  maximum-number-of-results: 20160
+  maximum-number-of-events: 500
+
+web:
+  address: 0.0.0.0
+  port: 8080
+
+ui:
+  title: Connectivity Monitor
+  description: Website reachability monitoring.
+  header: Connectivity Monitor
+  dashboard-heading: Connectivity Monitor
+  dashboard-subheading: Reachability checks across monitored websites and services.
+  default-sort-by: name
+  default-filter-by: none

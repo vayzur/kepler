@@ -1,0 +1,113 @@
+# Language ecosystems, runtimes, and operating systems.
+runtime-defaults: &runtime_defaults
+  group: "Runtimes & OS"
+  interval: 60s
+  client:
+    timeout: 10s
+  headers:
+    User-Agent: "tech-connectivity-monitor/1.0"
+    Accept: "*/*"
+  conditions:
+    - "[STATUS] >= 200"
+    - "[STATUS] < 400"
+
+endpoints:
+  - name: python
+    <<: *runtime_defaults
+    url: https://www.python.org/
+
+  - name: nodejs
+    <<: *runtime_defaults
+    url: https://nodejs.org/
+
+  - name: go
+    <<: *runtime_defaults
+    url: https://go.dev/
+
+  - name: rust
+    <<: *runtime_defaults
+    url: https://www.rust-lang.org/
+
+  - name: php
+    <<: *runtime_defaults
+    url: https://www.php.net/
+
+  - name: ruby
+    <<: *runtime_defaults
+    url: https://www.ruby-lang.org/
+
+  - name: java
+    <<: *runtime_defaults
+    url: https://www.java.com/
+
+  - name: openjdk
+    <<: *runtime_defaults
+    url: https://openjdk.org/
+
+  - name: kotlin
+    <<: *runtime_defaults
+    url: https://kotlinlang.org/
+
+  - name: swift
+    <<: *runtime_defaults
+    url: https://www.swift.org/
+
+  - name: dotnet
+    <<: *runtime_defaults
+    url: https://dotnet.microsoft.com/
+
+  - name: deno
+    <<: *runtime_defaults
+    url: https://deno.com/
+
+  - name: bun
+    <<: *runtime_defaults
+    url: https://bun.sh/
+
+  - name: kernel
+    <<: *runtime_defaults
+    url: https://www.kernel.org/
+
+  - name: ubuntu
+    <<: *runtime_defaults
+    url: https://ubuntu.com/
+
+  - name: debian
+    <<: *runtime_defaults
+    url: https://www.debian.org/
+
+  - name: archlinux
+    <<: *runtime_defaults
+    url: https://archlinux.org/
+
+  - name: alpine
+    <<: *runtime_defaults
+    url: https://alpinelinux.org/
+
+  - name: fedora
+    <<: *runtime_defaults
+    url: https://fedoraproject.org/
+
+  - name: opensuse
+    <<: *runtime_defaults
+    url: https://www.opensuse.org/
+
+  - name: nixos
+    <<: *runtime_defaults
+    url: https://nixos.org/
+
+  - name: linux-mint
+    <<: *runtime_defaults
+    url: https://linuxmint.com/
+
+  - name: rocky-linux
+    <<: *runtime_defaults
+    url: https://rockylinux.org/
+
+  - name: almalinux
+    <<: *runtime_defaults
+    url: https://almalinux.org/
+
+  - name: freebsd
+    <<: *runtime_defaults
+    url: https://www.freebsd.org/

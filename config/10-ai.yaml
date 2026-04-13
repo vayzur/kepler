@@ -1,0 +1,41 @@
+# Popular AI sites and platforms.
+ai-defaults: &ai_defaults
+  group: AI
+  interval: 60s
+  client:
+    timeout: 10s
+  headers:
+    User-Agent: "tech-connectivity-monitor/1.0"
+    Accept: "*/*"
+  conditions:
+    - "[STATUS] >= 200"
+    - "[STATUS] < 400"
+
+endpoints:
+  - name: chatgpt
+    <<: *ai_defaults
+    url: https://chatgpt.com/
+
+  - name: openai
+    <<: *ai_defaults
+    url: https://openai.com/
+
+  - name: claude
+    <<: *ai_defaults
+    url: https://claude.ai/
+
+  - name: anthropic
+    <<: *ai_defaults
+    url: https://www.anthropic.com/
+
+  - name: huggingface
+    <<: *ai_defaults
+    url: https://huggingface.co/
+
+  - name: perplexity
+    <<: *ai_defaults
+    url: https://www.perplexity.ai/
+
+  - name: mistral
+    <<: *ai_defaults
+    url: https://mistral.ai/

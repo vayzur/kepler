@@ -1,0 +1,57 @@
+# Cloud, CDN, and hosting providers.
+cloud-defaults: &cloud_defaults
+  group: "Cloud & Hosting"
+  interval: 60s
+  client:
+    timeout: 10s
+  headers:
+    User-Agent: "tech-connectivity-monitor/1.0"
+    Accept: "*/*"
+  conditions:
+    - "[STATUS] >= 200"
+    - "[STATUS] < 400"
+
+endpoints:
+  - name: vercel
+    <<: *cloud_defaults
+    url: https://vercel.com/
+
+  - name: vercel-app
+    <<: *cloud_defaults
+    url: https://vercel.app/
+
+  - name: netlify
+    <<: *cloud_defaults
+    url: https://www.netlify.com/
+
+  - name: cloudflare
+    <<: *cloud_defaults
+    url: https://www.cloudflare.com/
+
+  - name: cloudflare-pages
+    <<: *cloud_defaults
+    url: https://pages.cloudflare.com/
+
+  - name: cloudflare-workers
+    <<: *cloud_defaults
+    url: https://workers.cloudflare.com/
+
+  - name: fastly
+    <<: *cloud_defaults
+    url: https://www.fastly.com/
+
+  - name: aws
+    <<: *cloud_defaults
+    url: https://aws.amazon.com/
+
+  - name: azure
+    <<: *cloud_defaults
+    url: https://azure.microsoft.com/
+
+  - name: digitalocean
+    <<: *cloud_defaults
+    url: https://www.digitalocean.com/
+
+  - name: firebase
+    <<: *cloud_defaults
+    url: https://firebase.google.com/

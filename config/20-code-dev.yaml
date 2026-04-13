@@ -1,0 +1,65 @@
+# Code hosting, developer tools, and documentation platforms.
+code-dev-defaults: &code_dev_defaults
+  group: "Code & Dev"
+  interval: 60s
+  client:
+    timeout: 10s
+  headers:
+    User-Agent: "tech-connectivity-monitor/1.0"
+    Accept: "*/*"
+  conditions:
+    - "[STATUS] >= 200"
+    - "[STATUS] < 400"
+
+endpoints:
+  - name: github
+    <<: *code_dev_defaults
+    url: https://github.com/
+
+  - name: gitlab
+    <<: *code_dev_defaults
+    url: https://gitlab.com/
+
+  - name: bitbucket
+    <<: *code_dev_defaults
+    url: https://bitbucket.org/
+
+  - name: sourceforge
+    <<: *code_dev_defaults
+    url: https://sourceforge.net/
+
+  - name: stackoverflow
+    <<: *code_dev_defaults
+    url: https://stackoverflow.com/
+
+  - name: stackexchange
+    <<: *code_dev_defaults
+    url: https://stackexchange.com/
+
+  - name: mdn
+    <<: *code_dev_defaults
+    url: https://developer.mozilla.org/
+
+  - name: readthedocs
+    <<: *code_dev_defaults
+    url: https://readthedocs.org/
+
+  - name: vscode
+    <<: *code_dev_defaults
+    url: https://code.visualstudio.com/
+
+  - name: jetbrains
+    <<: *code_dev_defaults
+    url: https://www.jetbrains.com/
+
+  - name: git
+    <<: *code_dev_defaults
+    url: https://git-scm.com/
+
+  - name: postman
+    <<: *code_dev_defaults
+    url: https://www.postman.com/
+
+  - name: sentry
+    <<: *code_dev_defaults
+    url: https://sentry.io/

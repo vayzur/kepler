@@ -1,0 +1,29 @@
+# Academic and research platforms.
+research-defaults: &research_defaults
+  group: Research
+  interval: 60s
+  client:
+    timeout: 10s
+  headers:
+    User-Agent: "connectivity-monitor/1.0"
+    Accept: "*/*"
+  conditions:
+    - "[STATUS] >= 200"
+    - "[STATUS] < 400"
+
+endpoints:
+  - name: sciencedirect
+    <<: *research_defaults
+    url: https://www.sciencedirect.com/
+
+  - name: scopus
+    <<: *research_defaults
+    url: https://www.scopus.com/
+
+  - name: springer-link
+    <<: *research_defaults
+    url: https://link.springer.com/
+
+  - name: pubmed
+    <<: *research_defaults
+    url: https://pubmed.ncbi.nlm.nih.gov/

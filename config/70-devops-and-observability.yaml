@@ -1,0 +1,61 @@
+# DevOps, containers, orchestration, and observability tooling.
+devops-defaults: &devops_defaults
+  group: DevOps
+  interval: 60s
+  client:
+    timeout: 10s
+  headers:
+    User-Agent: "tech-connectivity-monitor/1.0"
+    Accept: "*/*"
+  conditions:
+    - "[STATUS] >= 200"
+    - "[STATUS] < 400"
+
+endpoints:
+  - name: docker
+    <<: *devops_defaults
+    url: https://www.docker.com/
+
+  - name: docker-hub
+    <<: *devops_defaults
+    url: https://hub.docker.com/
+
+  - name: kubernetes
+    <<: *devops_defaults
+    url: https://kubernetes.io/
+
+  - name: helm
+    <<: *devops_defaults
+    url: https://helm.sh/
+
+  - name: prometheus
+    <<: *devops_defaults
+    url: https://prometheus.io/
+
+  - name: grafana
+    <<: *devops_defaults
+    url: https://grafana.com/
+
+  - name: ansible
+    <<: *devops_defaults
+    url: https://www.ansible.com/
+
+  - name: envoy
+    <<: *devops_defaults
+    url: https://www.envoyproxy.io/
+
+  - name: istio
+    <<: *devops_defaults
+    url: https://istio.io/
+
+  - name: traefik
+    <<: *devops_defaults
+    url: https://traefik.io/
+
+  - name: nginx
+    <<: *devops_defaults
+    url: https://nginx.org/
+
+  - name: containerd
+    <<: *devops_defaults
+    url: https://containerd.io/

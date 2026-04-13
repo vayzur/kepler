@@ -1,0 +1,85 @@
+# Package registries and artifact repositories.
+package-defaults: &package_defaults
+  group: Packages
+  interval: 60s
+  client:
+    timeout: 10s
+  headers:
+    User-Agent: "tech-connectivity-monitor/1.0"
+    Accept: "*/*"
+  conditions:
+    - "[STATUS] >= 200"
+    - "[STATUS] < 400"
+
+endpoints:
+  - name: pypi
+    <<: *package_defaults
+    url: https://pypi.org/
+
+  - name: npmjs
+    <<: *package_defaults
+    url: https://www.npmjs.com/
+
+  - name: yarnpkg
+    <<: *package_defaults
+    url: https://yarnpkg.com/
+
+  - name: rubygems
+    <<: *package_defaults
+    url: https://rubygems.org/
+
+  - name: crates
+    <<: *package_defaults
+    url: https://crates.io/
+
+  - name: packagist
+    <<: *package_defaults
+    url: https://packagist.org/
+
+  - name: maven-central
+    <<: *package_defaults
+    url: https://repo.maven.apache.org/maven2/
+
+  - name: maven-search
+    <<: *package_defaults
+    url: https://search.maven.org/
+
+  - name: composer
+    <<: *package_defaults
+    url: https://getcomposer.org/
+
+  - name: nuget
+    <<: *package_defaults
+    url: https://www.nuget.org/
+
+  - name: pub-dev
+    <<: *package_defaults
+    url: https://pub.dev/
+
+  - name: hex-pm
+    <<: *package_defaults
+    url: https://hex.pm/
+
+  - name: terraform-registry
+    <<: *package_defaults
+    url: https://registry.terraform.io/
+
+  - name: artifacthub
+    <<: *package_defaults
+    url: https://artifacthub.io/
+
+  - name: gradle-plugins
+    <<: *package_defaults
+    url: https://plugins.gradle.org/
+
+  - name: homebrew
+    <<: *package_defaults
+    url: https://brew.sh/
+
+  - name: anaconda
+    <<: *package_defaults
+    url: https://anaconda.org/
+
+  - name: conda-forge
+    <<: *package_defaults
+    url: https://conda-forge.org/
