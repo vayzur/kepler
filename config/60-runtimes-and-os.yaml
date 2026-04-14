@@ -76,9 +76,37 @@ endpoints:
     <<: *runtime_defaults
     url: https://ubuntu.com/
 
+  - name: ubuntu-archive
+    <<: *runtime_defaults
+    url: https://archive.ubuntu.com/
+
+  - name: ubuntu-security
+    <<: *runtime_defaults
+    url: https://security.ubuntu.com/
+
+  - name: ubuntu-ports
+    <<: *runtime_defaults
+    url: https://ports.ubuntu.com/
+
+  - name: ubuntu-mirrors
+    <<: *runtime_defaults
+    url: https://mirrors.ubuntu.com/
+
+  - name: ubuntu-releases
+    <<: *runtime_defaults
+    url: https://releases.ubuntu.com/
+
   - name: debian
     <<: *runtime_defaults
     url: https://www.debian.org/
+
+  - name: debian-repo
+    <<: *runtime_defaults
+    url: https://deb.debian.org/
+
+  - name: raspberrypi
+    <<: *runtime_defaults
+    url: https://www.raspberrypi.com/
 
   - name: archlinux
     <<: *runtime_defaults

@@ -1,7 +1,7 @@
 # Global configuration.
 metrics: false
 skip-invalid-config-update: false
-concurrency: 25
+concurrency: 50
 
 storage:
   type: sqlite

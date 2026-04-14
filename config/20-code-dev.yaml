@@ -52,6 +52,10 @@ endpoints:
     <<: *code_dev_defaults
     url: https://askubuntu.com/
 
+  - name: figma
+    <<: *code_dev_defaults
+    url: https://www.figma.com/
+
   - name: vscode
     <<: *code_dev_defaults
     url: https://code.visualstudio.com/

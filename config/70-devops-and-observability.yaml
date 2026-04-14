@@ -40,6 +40,10 @@ endpoints:
     <<: *devops_defaults
     url: https://www.ansible.com/
 
+  - name: ansible-docs
+    <<: *devops_defaults
+    url: https://docs.ansible.com/
+
   - name: envoy
     <<: *devops_defaults
     url: https://www.envoyproxy.io/
