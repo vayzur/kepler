@@ -16,6 +16,10 @@ endpoints:
     <<: *security_defaults
     url: https://www.certum.eu/
 
+  - name: hcaptcha
+    <<: *security_defaults
+    url: https://www.hcaptcha.com/
+
   - name: zerossl
     <<: *security_defaults
     url: https://zerossl.com/

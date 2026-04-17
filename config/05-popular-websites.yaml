@@ -16,6 +16,14 @@ endpoints:
     <<: *popular_defaults
     url: https://www.google.com/
 
+  - name: playstation
+    <<: *popular_defaults
+    url: https://www.playstation.com/
+
   - name: wikipedia
     <<: *popular_defaults
     url: https://www.wikipedia.org/
+
+  - name: xbox
+    <<: *popular_defaults
+    url: https://www.xbox.com/
